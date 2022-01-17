@@ -38,10 +38,16 @@ call plug#end()
 
 " Treesitter Settings {{{
 
-lua require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+lua require 'nvim-treesitter.configs'.setup{ highlight = { enable = true } }
 
 " ignore TS Errors
 highlight link TSError Normal
+
+" }}}
+
+" Telescope settings {{{
+
+lua require('telescope').setup{ defaults = { file_ignore_patterns = { "target" } } }
 
 " }}}
 
@@ -141,13 +147,13 @@ let ayucolor = 'dark'
 " sonokai [default|atlantis|andromeda|shusia|maia|espresso]
 let g:sonokai_style = 'espresso'
 
-colorscheme sonokai
+colorscheme everforest
 
 " }}}
 
 " Transparency {{{
 
-"highlight Normal ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
 highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
