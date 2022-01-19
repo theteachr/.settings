@@ -53,10 +53,10 @@ lua require('telescope').setup{ defaults = { file_ignore_patterns = { "target" }
 
 " Options {{{
 
-set showcmd
+set noshowcmd
 set cursorline cursorlineopt=number
 set incsearch
-set ruler
+set noruler
 set tabstop=4
 set shiftwidth=4
 set smartcase
@@ -67,7 +67,7 @@ set nohlsearch
 set smartindent
 set autoread
 set hidden
-set nowrap
+set wrap
 set relativenumber
 set shortmess+=IFT
 set termguicolors
