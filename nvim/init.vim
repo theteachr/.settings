@@ -8,6 +8,7 @@ call plug#begin()
 " quality of life
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'chrisbra/Colorizer'
 
 " syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -25,12 +26,13 @@ Plug 'ajh17/spacegray.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nanotech/jellybeans.vim'
 Plug 'sainnhe/everforest'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 call plug#end()
 
@@ -147,14 +149,31 @@ let ayucolor = 'dark'
 " sonokai [default|atlantis|andromeda|shusia|maia|espresso]
 let g:sonokai_style = 'espresso'
 
-colorscheme everforest
+
+lua << EOF
+require("catppuccin").setup({
+  styles = {
+    comments = "italic",
+    functions = "NONE",
+    keywords = "NONE",
+    strings = "NONE",
+    variables = "NONE",
+  },
+  integrations = {
+    treesitter = true,
+  },
+})
+EOF
+
+
+colorscheme catppuccin
 
 " }}}
 
 " Transparency {{{
 
-highlight Normal ctermbg=none guibg=none
-highlight EndOfBuffer ctermbg=none guibg=none
+"highlight Normal ctermbg=none guibg=none
+"highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
 
