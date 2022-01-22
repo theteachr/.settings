@@ -166,7 +166,7 @@ require("catppuccin").setup({
 EOF
 
 
-colorscheme catppuccin
+colorscheme gruvbox-material
 
 " }}}
 
