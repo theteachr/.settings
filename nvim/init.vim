@@ -81,6 +81,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set listchars=tab:→\ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
+set path+=**
 
 " }}}
 
