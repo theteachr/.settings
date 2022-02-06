@@ -49,7 +49,16 @@ highlight link TSError Normal
 
 " Telescope settings {{{
 
-lua require('telescope').setup{ defaults = { file_ignore_patterns = { "target" } } }
+lua << EOF
+require('telescope').setup {
+	defaults = {
+		file_ignore_patterns = {
+			"target"
+		},
+		path_display = { "tail" },
+	},
+}
+EOF
 
 " }}}
 
