@@ -33,6 +33,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'savq/melange'
 
 call plug#end()
 
@@ -65,7 +66,8 @@ EOF
 " Options {{{
 
 set noshowcmd
-set cursorline cursorlineopt=number
+set cursorline
+set cursorlineopt=number
 set incsearch
 set noruler
 set tabstop=4
@@ -129,6 +131,7 @@ nnoremap <leader>f <cmd>Telescope find_files<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>
 nnoremap <leader>b <cmd>Telescope buffers<cr>
 nnoremap <leader>h <cmd>Telescope help_tags<cr>
+nnoremap <leader>o <cmd>Telescope oldfiles<cr>
 
 " show list
 nnoremap <silent> <Esc> :set list!<CR>
@@ -175,7 +178,7 @@ require("catppuccin").setup({
 })
 EOF
 
-colorscheme gruvbox-material
+colorscheme melange
 
 " }}}
 
