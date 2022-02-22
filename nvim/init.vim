@@ -185,7 +185,6 @@ colorscheme melange
 " Transparency {{{
 
 highlight Normal ctermbg=none guibg=none
-highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
 
