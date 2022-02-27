@@ -53,9 +53,7 @@ highlight link TSError Normal
 lua << EOF
 require('telescope').setup {
 	defaults = {
-		file_ignore_patterns = {
-			"target"
-		},
+		file_ignore_patterns = { "target" },
 		path_display = { "tail" },
 	},
 }
@@ -81,6 +79,7 @@ set smartindent
 set autoread
 set hidden
 set wrap
+set number
 set relativenumber
 set shortmess+=IFT
 set termguicolors
@@ -119,7 +118,7 @@ nnoremap <silent> <leader>. :bn<CR>
 nnoremap <silent> <leader>, :bp<CR>
 
 " copy to system clip
-vnoremap <silent> <leader>y "*y<CR>
+vnoremap <silent> <leader>y "+y<CR>
 
 map K k
 map Y y$
@@ -178,7 +177,7 @@ require("catppuccin").setup({
 })
 EOF
 
-colorscheme melange
+colorscheme everforest
 
 " }}}
 
