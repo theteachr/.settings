@@ -34,6 +34,7 @@ Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'savq/melange'
+Plug 'RRethy/nvim-base16'
 
 call plug#end()
 
@@ -156,11 +157,10 @@ let g:everforest_background = 'hard'
 let g:gruvbox_background = 'hard'
 
 " ayu [mirage|dark|light]
-let ayucolor = 'dark'
+let ayucolor = 'mirage'
 
 " sonokai [default|atlantis|andromeda|shusia|maia|espresso]
 let g:sonokai_style = 'espresso'
-
 
 lua << EOF
 require("catppuccin").setup({
@@ -177,7 +177,7 @@ require("catppuccin").setup({
 })
 EOF
 
-colorscheme everforest
+colorscheme ayu
 
 " }}}
 
@@ -189,9 +189,10 @@ highlight Normal ctermbg=none guibg=none
 
 " Auto Commands {{{
 
-augroup CSNIPPET
+augroup NEW_FILE_SNIPS
 	autocmd!
-	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/boiler.c
+	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/new.c
+	autocmd BufNewFile *.java :0r ~/.config/nvim/snippets/java/new.java
 augroup END
 
 augroup Terminal
