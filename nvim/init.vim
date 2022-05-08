@@ -32,7 +32,7 @@ Plug 'sainnhe/everforest'
 Plug 'sainnhe/gruvbox-material'
 Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'theteachr/nvim', {'as': 'catppuccin'}
 Plug 'savq/melange'
 Plug 'RRethy/nvim-base16'
 
