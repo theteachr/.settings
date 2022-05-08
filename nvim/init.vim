@@ -68,7 +68,7 @@ set noshowcmd
 set cursorline
 set cursorlineopt=number
 set incsearch
-set noruler
+set ruler
 set tabstop=4
 set shiftwidth=4
 set smartcase
