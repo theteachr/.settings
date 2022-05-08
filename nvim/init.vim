@@ -54,7 +54,7 @@ highlight link TSError Normal
 lua << EOF
 require('telescope').setup {
 	defaults = {
-		file_ignore_patterns = { "target" },
+		file_ignore_patterns = { "target", "__pycache__" },
 		path_display = { "tail" },
 	},
 }
