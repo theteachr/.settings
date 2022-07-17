@@ -177,14 +177,20 @@ require("catppuccin").setup({
 })
 EOF
 
-colorscheme gruvbox-material
+colorscheme everforest
+
+" }}}
+
+" Neovide {{{
+
+set guifont=Rec\ Mono\ Semicasual:h14
 
 " }}}
 
 " Transparency {{{
 
-highlight Normal ctermbg=none guibg=none
-highlight EndOfBuffer ctermbg=none guibg=none
+"highlight Normal ctermbg=none guibg=none
+"highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
 
@@ -194,6 +200,7 @@ augroup NEW_FILE_SNIPS
 	autocmd!
 	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/new.c
 	autocmd BufNewFile *.java :0r ~/.config/nvim/snippets/java/new.java
+	autocmd BufNewFile *.py :0r ~/.config/nvim/snippets/python/new.py
 augroup END
 
 augroup Terminal
