@@ -177,7 +177,7 @@ require("catppuccin").setup({
 })
 EOF
 
-colorscheme everforest
+colorscheme gruvbox-material
 
 " }}}
 
@@ -189,8 +189,8 @@ set guifont=Rec\ Mono\ Semicasual:h14
 
 " Transparency {{{
 
-"highlight Normal ctermbg=none guibg=none
-"highlight EndOfBuffer ctermbg=none guibg=none
+highlight Normal ctermbg=none guibg=none
+highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
 
