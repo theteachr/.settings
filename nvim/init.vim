@@ -64,7 +64,7 @@ EOF
 
 " Options {{{
 
-set noshowcmd
+set showcmd
 set cursorline
 set cursorlineopt=number
 set incsearch
@@ -183,14 +183,33 @@ colorscheme gruvbox-material
 
 " Neovide {{{
 
-set guifont=Rec\ Mono\ Semicasual:h14
+set guifont=Fantasque\ Sans\ Mono\:h18
+
+" Launch full screen
+let g:neovide_fullscreen=v:true
+
+" Cursor animations
+"let g:neovide_cursor_vfx_mode = "railgun"
+"let g:neovide_cursor_vfx_mode = "torpedo"
+let g:neovide_cursor_vfx_mode = "pixiedust"
+"let g:neovide_cursor_vfx_mode = "sonicboom"
+"let g:neovide_cursor_vfx_mode = "ripple"
+"let g:neovide_cursor_vfx_mode = "wireframe"
+
+" Particle properties
+let g:neovide_cursor_vfx_opacity=200.0
+let g:neovide_cursor_vfx_particle_lifetime=1.2
+let g:neovide_cursor_vfx_particle_density=64.0
+let g:neovide_cursor_vfx_particle_speed=10.0
+let g:neovide_cursor_vfx_particle_phase=1.5
+let g:neovide_cursor_vfx_particle_curl=1.0
 
 " }}}
 
 " Transparency {{{
 
-highlight Normal ctermbg=none guibg=none
-highlight EndOfBuffer ctermbg=none guibg=none
+highlight Normal ctermbg=none
+highlight EndOfBuffer ctermbg=none
 
 " }}}
 
