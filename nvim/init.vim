@@ -51,7 +51,7 @@ highlight link TSError Normal
 
 " }}}
 
-" Telescope settings {{{
+" Telescope Settings {{{
 
 lua << EOF
 require('telescope').setup {
@@ -115,7 +115,7 @@ require("nvim-tree").setup {
 }
 EOF
 
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <silent> <C-n> :NvimTreeToggle<CR>
 
 " }}}
 
