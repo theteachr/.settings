@@ -9,6 +9,8 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'chrisbra/Colorizer'
+"Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " syntax
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -93,6 +95,27 @@ set nobackup
 set nowritebackup
 set listchars=tab:→\ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 set path+=**
+
+" }}}
+
+" File Tree Settings {{{
+
+lua << EOF
+require("nvim-tree").setup {
+	renderer = {
+		icons = {
+			show = {
+				file = false,
+				folder = false,
+				folder_arrow = false,
+				git = false,
+			},
+		},
+	},
+}
+EOF
+
+nnoremap <C-n> :NvimTreeToggle<CR>
 
 " }}}
 
@@ -208,8 +231,8 @@ let g:neovide_cursor_vfx_particle_curl=1.0
 
 " Transparency {{{
 
-highlight Normal ctermbg=none
-highlight EndOfBuffer ctermbg=none
+highlight Normal ctermbg=none guibg=none
+highlight EndOfBuffer ctermbg=none guibg=none
 
 " }}}
 
