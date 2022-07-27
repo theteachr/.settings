@@ -271,7 +271,7 @@ vim.cmd("colorscheme gruvbox-material")
 
 -- Neovide {{{
 
-vim.opt.guifont = "Fantasque Sans Mono:h18"
+vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h18"
 
 -- Launch full screen
 
