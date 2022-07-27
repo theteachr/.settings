@@ -1,8 +1,6 @@
 -- init.lua
 -- Author: @theteachr
 
-require('plugins')
-
 -- Treesitter Settings {{{
 
 require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
@@ -239,42 +237,35 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 -- Colorscheme Settings {{{
 
-vim.cmd([[
-let g:everforest_background = 'hard'
-let g:gruvbox_background = 'hard'
-]])
+vim.g.everforest_background = 'hard'
+vim.g.gruvbox_background = 'hard'
 
-vim.cmd([[
-let ayucolor = 'mirage'
-"let ayucolor = 'dark'
-"let ayucolor = 'light'
-]])
+vim.ayucolor = 'mirage'
 
-vim.cmd([[
-"let g:sonokai_style = 'espresso'
-"let g:sonokai_style = 'default'
-"let g:sonokai_style = 'andromeda'
-"let g:sonokai_style = 'atlantis'
-"let g:sonokai_style = 'maia'
-let g:sonokai_style = 'shusia'
-]])
+-- vim.ayucolor = 'dark'
+-- vim.ayucolor = 'light'
+
+-- vim.g.sonokai_style = 'espresso'
+-- vim.g.sonokai_style = 'default'
+-- vim.g.sonokai_style = 'andromeda'
+-- vim.g.sonokai_style = 'atlantis'
+-- vim.g.sonokai_style = 'maia'
+vim.g.sonokai_style = 'shusia'
 
 require("catppuccin").setup({
-styles = {
-	comments = "italic",
-	functions = "NONE",
-	keywords = "NONE",
-	strings = "NONE",
-	variables = "NONE",
-},
-integrations = {
-	treesitter = true,
-},
+	styles = {
+		comments = "NONE",
+		functions = "NONE",
+		keywords = "NONE",
+		strings = "NONE",
+		variables = "NONE",
+	},
+	integrations = {
+		treesitter = true,
+	},
 })
 
-vim.cmd([[
-colorscheme gruvbox-material
-]])
+vim.cmd("colorscheme gruvbox-material")
 
 -- }}}
 
@@ -284,26 +275,28 @@ vim.opt.guifont = "Fantasque Sans Mono:h18"
 
 -- Launch full screen
 
+vim.g.neovide_fullscreen = true
+
+-- Cursor animations
+
+vim.g.neovide_cursor_vfx_mode = "pixiedust"
+
+-- vim.g.neovide_cursor_vfx_mode = "railgun"
+-- vim.g.neovide_cursor_vfx_mode = "torpedo"
+-- vim.g.neovide_cursor_vfx_mode = "sonicboom"
+-- vim.g.neovide_cursor_vfx_mode = "ripple"
+-- vim.g.neovide_cursor_vfx_mode = "wireframe"
+
+-- Particle properties
+
+vim.g.neovide_cursor_vfx_opacity = 200.0
+vim.g.neovide_cursor_vfx_particle_lifetime = 1.2
+vim.g.neovide_cursor_vfx_particle_density = 64.0
+vim.g.neovide_cursor_vfx_particle_speed = 10.0
+vim.g.neovide_cursor_vfx_particle_phase = 1.5
+vim.g.neovide_cursor_vfx_particle_curl = 1.0
+
 vim.cmd([[
-let g:neovide_fullscreen=v:true
-
-" Cursor animations
-
-"let g:neovide_cursor_vfx_mode = "railgun"
-"let g:neovide_cursor_vfx_mode = "torpedo"
-let g:neovide_cursor_vfx_mode = "pixiedust"
-"let g:neovide_cursor_vfx_mode = "sonicboom"
-"let g:neovide_cursor_vfx_mode = "ripple"
-"let g:neovide_cursor_vfx_mode = "wireframe"
-
-" Particle properties
-let g:neovide_cursor_vfx_opacity=200.0
-let g:neovide_cursor_vfx_particle_lifetime=1.2
-let g:neovide_cursor_vfx_particle_density=64.0
-let g:neovide_cursor_vfx_particle_speed=10.0
-let g:neovide_cursor_vfx_particle_phase=1.5
-let g:neovide_cursor_vfx_particle_curl=1.0
-
 " Transparency {{{
 
 highlight Normal ctermbg=none guibg=none
@@ -315,18 +308,17 @@ highlight EndOfBuffer ctermbg=none guibg=none
 
 augroup NEW_FILE_SNIPS
 autocmd!
-autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/new.c
-autocmd BufNewFile *.java :0r ~/.config/nvim/snippets/java/new.java
-autocmd BufNewFile *.py :0r ~/.config/nvim/snippets/python/new.py
+	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/new.c
+	autocmd BufNewFile *.java :0r ~/.config/nvim/snippets/java/new.java
+	autocmd BufNewFile *.py :0r ~/.config/nvim/snippets/python/new.py
 augroup END
 
 augroup Terminal
-autocmd!
-autocmd BufWinEnter,WinEnter term://* startinsert
+	autocmd!
+	autocmd BufWinEnter,WinEnter term://* startinsert
 augroup END
 
+" }}}
 ]])
-
--- }}}
 
 -- vim:fileencoding=utf-8:foldmethod=marker
