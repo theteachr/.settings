@@ -75,10 +75,10 @@ renderer = {
 }
 
 vim.api.nvim_set_keymap(
-"n",
-"<C-n>",
-":NvimTreeToggle<CR>",
-{ noremap = true, silent = true }
+	"n",
+	"<C-n>",
+	":NvimTreeToggle<CR>",
+	{ noremap = true, silent = true }
 )
 
 -- }}}
@@ -95,72 +95,72 @@ filetype indent on
 -- Keymaps {{{
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>s",
-":set hlsearch!<CR>",
-{ noremap = true, silent = true }
+	"n",
+	"<leader>s",
+	":set hlsearch!<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>n",
-":set relativenumber!<CR>",
-{ noremap = true, silent = true }
+	"n",
+	"<leader>n",
+	":set relativenumber!<CR>",
+	{ noremap = true, silent = true }
 )
 
 -- split window
 
 vim.api.nvim_set_keymap(
-"n",
-"<C-h>",
-"<C-w>h",
-{ noremap = true, silent = true }
+	"n",
+	"<C-h>",
+	"<C-w>h",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<C-j>",
-"<C-w>j",
-{ noremap = true, silent = true }
+	"n",
+	"<C-j>",
+	"<C-w>j",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<C-k>",
-"<C-w>k",
-{ noremap = true, silent = true }
+	"n",
+	"<C-k>",
+	"<C-w>k",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<C-l>",
-"<C-w>l",
-{ noremap = true, silent = true }
+	"n",
+	"<C-l>",
+	"<C-w>l",
+	{ noremap = true, silent = true }
 )
 
 -- buffer navigation
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>,",
-":bp<CR>",
-{ noremap = true, silent = true }
+	"n",
+	"<leader>,",
+	":bp<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>.",
-":bn<CR>",
-{ noremap = true, silent = true }
+	"n",
+	"<leader>.",
+	":bn<CR>",
+	{ noremap = true, silent = true }
 )
 
 -- copy to system clip
 
 vim.api.nvim_set_keymap(
-"v",
-"<leader>y",
-"+y<CR>",
-{ noremap = true, silent = true }
+	"v",
+	"<leader>y",
+	"+y<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.cmd([[
@@ -172,56 +172,56 @@ map <Space> :
 -- telecope bindings
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>f",
-"<cmd>Telescope find_files<CR>",
-{ noremap = true }
+	"n",
+	"<leader>f",
+	"<cmd>Telescope find_files<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>g",
-"<cmd>Telescope live_grep<CR>",
-{ noremap = true }
+	"n",
+	"<leader>g",
+	"<cmd>Telescope live_grep<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>b",
-"<cmd>Telescope buffers<CR>",
-{ noremap = true }
+	"n",
+	"<leader>b",
+	"<cmd>Telescope buffers<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>h",
-"<cmd>Telescope help_tags<CR>",
-{ noremap = true }
+	"n",
+	"<leader>h",
+	"<cmd>Telescope help_tags<CR>",
+	{ noremap = true, silent = true }
 )
 
 vim.api.nvim_set_keymap(
-"n",
-"<leader>o",
-"<cmd>Telescope old_files<CR>",
-{ noremap = true }
+	"n",
+	"<leader>o",
+	"<cmd>Telescope old_files<CR>",
+	{ noremap = true, silent = true }
 )
 
 -- show list
 
 vim.api.nvim_set_keymap(
-"n",
-"<Esc>",
-":set list!<CR>",
-{ noremap = true }
+	"n",
+	"<Esc>",
+	":set list!<CR>",
+	{ noremap = true, silent = true }
 )
 
 -- normal escape in terminal
 
 vim.api.nvim_set_keymap(
-"t",
-"<Esc>",
-"<C-\\><C-n>",
-{ noremap = true }
+	"t",
+	"<Esc>",
+	"<C-\\><C-n>",
+	{ noremap = true, silent = true }
 )
 
 -- }}}
