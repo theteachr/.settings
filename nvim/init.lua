@@ -160,7 +160,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"v",
 	"<leader>y",
-	"+y<CR>",
+	"\"+y<CR>",
 	{ noremap = true, silent = true }
 )
 
@@ -270,6 +270,26 @@ vim.cmd("colorscheme gruvbox-material")
 
 -- }}}
 
+-- Auto Commands {{{
+
+vim.cmd([[
+
+augroup NEW_FILE_SNIPS
+autocmd!
+	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/new.c
+	autocmd BufNewFile *.java :0r ~/.config/nvim/snippets/java/new.java
+	autocmd BufNewFile *.py :0r ~/.config/nvim/snippets/python/new.py
+augroup END
+
+augroup Terminal
+	autocmd!
+	autocmd BufWinEnter,WinEnter term://* startinsert
+augroup END
+
+]])
+
+-- }}}
+
 -- Neovide {{{
 
 vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h18"
@@ -297,29 +317,21 @@ vim.g.neovide_cursor_vfx_particle_speed = 10.0
 vim.g.neovide_cursor_vfx_particle_phase = 1.5
 vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
+-- }}}
+
+-- Transparency {{{
+
 vim.cmd([[
-" Transparency {{{
+if !exists('g:neovide')
+	highlight Normal ctermbg=none guibg=none
+	highlight EndOfBuffer ctermbg=none guibg=none
+endif
 
-highlight Normal ctermbg=none guibg=none
-highlight EndOfBuffer ctermbg=none guibg=none
-
-" }}}
-
-" Auto Commands {{{
-
-augroup NEW_FILE_SNIPS
-autocmd!
-	autocmd BufNewFile *.c :0r ~/.config/nvim/snippets/c/new.c
-	autocmd BufNewFile *.java :0r ~/.config/nvim/snippets/java/new.java
-	autocmd BufNewFile *.py :0r ~/.config/nvim/snippets/python/new.py
-augroup END
-
-augroup Terminal
-	autocmd!
-	autocmd BufWinEnter,WinEnter term://* startinsert
-augroup END
-
-" }}}
+if exists('g:neovide')
+	colorscheme catppuccin
+endif
 ]])
+
+-- }}}
 
 -- vim:fileencoding=utf-8:foldmethod=marker
