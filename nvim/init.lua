@@ -17,6 +17,7 @@ require('telescope').setup {
 	defaults = {
 		file_ignore_patterns = { "target", "__pycache__" },
 		path_display = { "tail" },
+		sorting_strategy = "descending"
 	},
 }
 
@@ -202,7 +203,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>o",
-	"<cmd>Telescope old_files<CR>",
+	"<cmd>Telescope oldfiles<CR>",
 	{ noremap = true, silent = true }
 )
 
