@@ -321,16 +321,16 @@ vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
 -- Transparency {{{
 
-vim.cmd([[
-if !exists('g:neovide')
+if not vim.g.neovide then
+	vim.cmd([[
 	highlight Normal ctermbg=none guibg=none
 	highlight EndOfBuffer ctermbg=none guibg=none
-endif
+	]])
+end
 
-if exists('g:neovide')
-	colorscheme catppuccin
-endif
-]])
+if vim.g.neovide then
+	vim.cmd("colorscheme nordfox")
+end
 
 -- }}}
 
