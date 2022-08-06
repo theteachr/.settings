@@ -251,7 +251,7 @@ vim.ayucolor = 'mirage'
 -- vim.g.sonokai_style = 'andromeda'
 -- vim.g.sonokai_style = 'atlantis'
 -- vim.g.sonokai_style = 'maia'
-vim.g.sonokai_style = 'shusia'
+vim.g.sonokai_style = 'atlantis'
 
 require("catppuccin").setup({
 	styles = {
@@ -292,11 +292,19 @@ augroup END
 
 -- Neovide {{{
 
+-- Colorscheme {{{
+
+if vim.g.neovide then
+	vim.cmd("colorscheme catppuccin")
+end
+
+-- }}}
+
 vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h18"
 
 -- Launch full screen
 
-vim.g.neovide_fullscreen = true
+vim.g.neovide_fullscreen = false
 
 -- Cursor animations
 
@@ -326,10 +334,6 @@ if not vim.g.neovide then
 	highlight Normal ctermbg=none guibg=none
 	highlight EndOfBuffer ctermbg=none guibg=none
 	]])
-end
-
-if vim.g.neovide then
-	vim.cmd("colorscheme nordfox")
 end
 
 -- }}}
