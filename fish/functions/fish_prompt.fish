@@ -4,9 +4,12 @@ function fish_prompt
     end
 
     set_color -o
+
     if fish_is_root_user
         echo -n (set_color red)'# '
     end
+
     echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+
     set_color normal
 end
