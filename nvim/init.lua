@@ -34,7 +34,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartcase = true
 vim.opt.smarttab = true
-vim.opt.ignorecase = true
+vim.opt.ignorecase = false
 vim.opt.expandtab = false
 vim.opt.hlsearch = false
 vim.opt.smartindent = true
@@ -266,7 +266,7 @@ require("catppuccin").setup({
 	},
 })
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme everforest")
 
 -- }}}
 
