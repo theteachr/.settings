@@ -36,4 +36,31 @@ return require('packer').startup(function(use)
 	use { 'theteachr/nvim', { as = 'catppuccin' } }
 	use 'savq/melange'
 	use 'RRethy/nvim-base16'
+
+	-- lsp
+
+	-- collection of common configurations for the nvim lsp client
+	use 'neovim/nvim-lspconfig'
+
+	-- completion framework
+	use 'hrsh7th/nvim-cmp'
+
+	-- lsp completion source for nvim-cmp
+	use 'hrsh7th/cmp-nvim-lsp'
+
+	-- snippet completion source for nvim-cmp
+	use 'hrsh7th/cmp-vsnip'
+
+	-- other usefull completion sources
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-buffer'
+
+	-- see hrsh7th's other plugins for more completion sources!
+
+	-- to enable more of the features of rust-analyzer, such as inlay hints and more!
+	use 'simrat39/rust-tools.nvim'
+
+	-- snippet engine
+	use 'hrsh7th/vim-vsnip'
+
 end)

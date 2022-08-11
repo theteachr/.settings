@@ -1,6 +1,8 @@
 -- init.lua
 -- Author: @theteachr
 
+-- require('lsp')
+
 -- Treesitter Settings {{{
 
 require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
@@ -165,7 +167,6 @@ vim.api.nvim_set_keymap(
 )
 
 vim.cmd([[
-map K k
 map Y y$
 map <Space> :
 ]])
