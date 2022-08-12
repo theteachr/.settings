@@ -1,4 +1,7 @@
 return require('packer').startup(function(use)
+
+	use 'wbthomason/packer.nvim'
+
 	-- quality of life
 
 	use 'tpope/vim-fugitive'
@@ -62,5 +65,6 @@ return require('packer').startup(function(use)
 
 	-- snippet engine
 	use 'hrsh7th/vim-vsnip'
+	use 'onsails/lspkind.nvim'
 
 end)
