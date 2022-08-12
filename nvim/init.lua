@@ -1,15 +1,11 @@
 -- init.lua
 -- Author: @theteachr
 
--- require('lsp')
+require('lsp')
 
 -- Treesitter Settings {{{
 
 require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
-
--- ignore TS Errors
-
-vim.cmd("highlight link TSError Normal")
 
 -- }}}
 
@@ -59,6 +55,8 @@ vim.opt.writebackup = false
 vim.opt.listchars = "tab:→ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨"
 
 vim.cmd("set path+=**")
+
+vim.opt.signcolumn='yes:1'
 
 -- }}}
 
