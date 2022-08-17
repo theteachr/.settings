@@ -28,12 +28,13 @@ return require('packer').startup(function(use)
 	use 'ayu-theme/ayu-vim'
 	use 'bluz71/vim-nightfly-guicolors'
 	use { 'folke/tokyonight.nvim', { branch = 'main' } }
+	use 'ntk148v/vim-horizon'
 	use 'nanotech/jellybeans.vim'
 	use 'sainnhe/everforest'
 	use 'sainnhe/gruvbox-material'
 	use 'sainnhe/sonokai'
 	use 'EdenEast/nightfox.nvim'
-	use { 'theteachr/nvim', { as = 'catppuccin' } }
 	use 'savq/melange'
 	use 'RRethy/nvim-base16'
+	use { "catppuccin/nvim", as = "catppuccin" }
 end)
