@@ -37,4 +37,10 @@ return require('packer').startup(function(use)
 	use 'savq/melange'
 	use 'RRethy/nvim-base16'
 	use { "catppuccin/nvim", as = "catppuccin" }
+
+	use({
+		'rose-pine/neovim',
+		as = 'rose-pine',
+		tag = 'v1.*',
+	})
 end)
