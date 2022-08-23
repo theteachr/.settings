@@ -43,4 +43,7 @@ return require('packer').startup(function(use)
 		as = 'rose-pine',
 		tag = 'v1.*',
 	})
+
+	use 'xolox/vim-misc'
+	use 'xolox/vim-colorscheme-switcher'
 end)
