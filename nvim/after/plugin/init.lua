@@ -7,8 +7,9 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'tpope/vim-surround'
 	use 'chrisbra/Colorizer'
-	use 'kyazdani42/nvim-web-devicons'
+	--use 'kyazdani42/nvim-web-devicons'
 	use 'kyazdani42/nvim-tree.lua'
+	use '07734willy/PyRepl'
 
 	-- syntax
 
