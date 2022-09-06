@@ -3,6 +3,9 @@
 
 require('lsp')
 
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 -- Treesitter Settings {{{
 
 require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
