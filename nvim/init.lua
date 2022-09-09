@@ -167,9 +167,17 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
+-- lsp
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>l",
+	"<cmd>Telescope lsp_document_symbols<CR>",
+	{ noremap = true, silent = true }
+)
+
 vim.cmd([[
 map Y y$
-map <Space> :
 ]])
 
 -- telecope bindings
