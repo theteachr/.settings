@@ -235,6 +235,15 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
+-- fuzzy select colorscheme
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>;",
+	"<cmd>Telescope colorscheme<CR>",
+	{ noremap = true, silent = true }
+)
+
 -- }}}
 
 -- Custom Text Objects {{{
@@ -276,7 +285,7 @@ require("catppuccin").setup({
 	},
 })
 
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme everforest")
 
 -- }}}
 
