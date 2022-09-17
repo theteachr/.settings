@@ -257,6 +257,48 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 -- Colorscheme Settings {{{
 
+require('rose-pine').setup({
+	--- @usage 'main' | 'moon'
+	dark_variant = 'main',
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = false,
+	disable_float_background = false,
+	disable_italics = true,
+
+	--- @usage string hex value or named color from rosepinetheme.com/palette
+	groups = {
+		background = 'base',
+		panel = 'surface',
+		border = 'highlight_med',
+		comment = 'muted',
+		link = 'iris',
+		punctuation = 'subtle',
+
+		error = 'love',
+		hint = 'iris',
+		info = 'foam',
+		warn = 'gold',
+
+		headings = {
+			h1 = 'iris',
+			h2 = 'foam',
+			h3 = 'rose',
+			h4 = 'gold',
+			h5 = 'pine',
+			h6 = 'foam',
+		}
+		-- or set all headings at once
+		-- headings = 'subtle'
+	},
+
+	-- Change specific vim highlight groups
+	highlight_groups = {
+		ColorColumn = { bg = 'rose' },
+		EndOfBuffer = { fg = 'highlight_med' }
+	}
+})
+
 vim.g.everforest_background = 'hard'
 vim.g.gruvbox_background = 'hard'
 
@@ -272,20 +314,20 @@ vim.ayucolor = 'mirage'
 -- vim.g.sonokai_style = 'maia'
 vim.g.sonokai_style = 'atlantis'
 
-require("catppuccin").setup({
-	styles = {
-		comments = "NONE",
-		functions = "NONE",
-		keywords = "NONE",
-		strings = "NONE",
-		variables = "NONE",
-	},
-	integrations = {
-		treesitter = true,
-	},
-})
+-- require("catppuccin").setup({
+-- 	styles = {
+-- 		comments = "NONE",
+-- 		functions = "NONE",
+-- 		keywords = "NONE",
+-- 		strings = "NONE",
+-- 		variables = "NONE",
+-- 	},
+-- 	integrations = {
+-- 		treesitter = true,
+-- 	},
+-- })
 
-vim.cmd("colorscheme everforest")
+vim.cmd("colorscheme rose-pine")
 
 -- }}}
 
@@ -351,7 +393,7 @@ vim.g.neovide_cursor_vfx_particle_curl = 1.0
 if not vim.g.neovide then
 	vim.cmd([[
 	highlight Normal ctermbg=none guibg=none
-	highlight EndOfBuffer ctermbg=none guibg=none
+	highlight EndOfBuffer ctermfg=none guifg=#26233a
 	]])
 end
 

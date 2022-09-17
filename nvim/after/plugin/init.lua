@@ -37,9 +37,12 @@ return require('packer').startup(function(use)
 	use 'sainnhe/gruvbox-material'
 	use 'sainnhe/sonokai'
 	use 'EdenEast/nightfox.nvim'
-	use { 'theteachr/nvim', { as = 'catppuccin' } }
+	use({
+		'rose-pine/neovim',
+		as = 'rose-pine',
+		tag = 'v1.*',
+	})
 	use 'savq/melange'
-	use 'RRethy/nvim-base16'
 
 	-- lsp
 
