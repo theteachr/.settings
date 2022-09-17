@@ -101,8 +101,6 @@ nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gh    <cmd>RustHoverActions<CR>
 ]])
 
-require('lsp.python')
-
 vim.diagnostic.config({
   virtual_text = true,
   signs = true,
@@ -110,3 +108,6 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = false,
 })
+
+require('lsp.python')
+require'lspconfig'.tsserver.setup {}
