@@ -44,8 +44,9 @@ vim.opt.hidden = true
 vim.opt.wrap = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.background = 'dark'
 
-vim.cmd("set shortmess+=IFT")
+vim.o.shortmess = vim.o.shortmess .. 'IFT'
 
 vim.opt.termguicolors = true
 vim.opt.inccommand = "split"
@@ -396,6 +397,8 @@ if not vim.g.neovide then
 	highlight EndOfBuffer ctermfg=none guifg=#26233a
 	]])
 end
+
+vim.cmd("highlight SignColumn ctermbg=none guibg=none")
 
 -- }}}
 
