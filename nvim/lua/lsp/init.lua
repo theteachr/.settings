@@ -111,3 +111,4 @@ vim.diagnostic.config({
 
 require('lsp.python')
 require'lspconfig'.tsserver.setup {}
+require'lspconfig'.ocamllsp.setup {}

@@ -296,14 +296,14 @@ require('rose-pine').setup({
 	-- Change specific vim highlight groups
 	highlight_groups = {
 		ColorColumn = { bg = 'rose' },
-		EndOfBuffer = { fg = 'highlight_med' }
+		NonText = { fg = 'highlight_med' }
 	}
 })
 
 vim.g.everforest_background = 'hard'
 vim.g.gruvbox_background = 'hard'
 
-vim.ayucolor = 'mirage'
+vim.g.ayucolor = 'mirage'
 
 -- vim.ayucolor = 'dark'
 -- vim.ayucolor = 'light'
@@ -313,7 +313,7 @@ vim.ayucolor = 'mirage'
 -- vim.g.sonokai_style = 'andromeda'
 -- vim.g.sonokai_style = 'atlantis'
 -- vim.g.sonokai_style = 'maia'
-vim.g.sonokai_style = 'atlantis'
+vim.g.sonokai_style = 'maia'
 
 -- require("catppuccin").setup({
 -- 	styles = {
@@ -328,7 +328,7 @@ vim.g.sonokai_style = 'atlantis'
 -- 	},
 -- })
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme spacegray")
 
 -- }}}
 
@@ -394,11 +394,11 @@ vim.g.neovide_cursor_vfx_particle_curl = 1.0
 if not vim.g.neovide then
 	vim.cmd([[
 	highlight Normal ctermbg=none guibg=none
-	highlight EndOfBuffer ctermfg=none guifg=#26233a
 	]])
 end
 
 vim.cmd("highlight SignColumn ctermbg=none guibg=none")
+vim.cmd("highlight LineNr ctermbg=none guibg=none")
 
 -- }}}
 
