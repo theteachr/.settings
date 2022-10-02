@@ -328,7 +328,9 @@ vim.g.sonokai_style = 'maia'
 -- 	},
 -- })
 
-vim.cmd("colorscheme spacegray")
+vim.g.catppuccin_flavour = "mocha"
+
+vim.cmd("colorscheme kanagawa")
 
 -- }}}
 
@@ -391,14 +393,16 @@ vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
 -- Transparency {{{
 
-if not vim.g.neovide then
-	vim.cmd([[
-	highlight Normal ctermbg=none guibg=none
-	]])
-end
+-- if not vim.g.neovide then
+-- 	vim.cmd([[
+-- 	highlight Normal ctermbg=none guibg=none
+-- 	highlight SignColumn ctermbg=none guibg=none
+-- 	highlight LineNr ctermbg=none guibg=none
+-- 	highlight NonText ctermbg=none guibg=none
+-- 	highlight EndOfBuffer ctermbg=none guibg=none
+-- 	]])
+-- end
 
-vim.cmd("highlight SignColumn ctermbg=none guibg=none")
-vim.cmd("highlight LineNr ctermbg=none guibg=none")
 
 -- }}}
 

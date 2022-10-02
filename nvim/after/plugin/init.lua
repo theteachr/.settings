@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 	--use 'kyazdani42/nvim-web-devicons'
 	use 'kyazdani42/nvim-tree.lua'
 	use '07734willy/PyRepl'
+	--use 'lewis6991/gitsigns.nvim'
 
 	-- syntax
 
@@ -28,6 +29,7 @@ return require('packer').startup(function(use)
 	-- colorschemes
 
 	use 'ajh17/spacegray.vim'
+	use "rebelot/kanagawa.nvim"
 	use 'arcticicestudio/nord-vim'
 	use 'ayu-theme/ayu-vim'
 	use 'bluz71/vim-nightfly-guicolors'
@@ -43,6 +45,7 @@ return require('packer').startup(function(use)
 		tag = 'v1.*',
 	})
 	use 'savq/melange'
+	use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- lsp
 
@@ -61,8 +64,6 @@ return require('packer').startup(function(use)
 	-- other usefull completion sources
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-buffer'
-
-	-- see hrsh7th's other plugins for more completion sources!
 
 	-- to enable more of the features of rust-analyzer, such as inlay hints and more!
 	use 'simrat39/rust-tools.nvim'
