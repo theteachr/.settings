@@ -21,7 +21,7 @@ require('telescope').setup {
 		file_ignore_patterns = { "target", "__pycache__" },
 		path_display = { "tail" },
 		sorting_strategy = "descending"
-	},
+	}
 }
 
 -- }}}
@@ -415,15 +415,17 @@ vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
 -- Transparency {{{
 
--- if not vim.g.neovide then
--- 	vim.cmd([[
--- 	highlight Normal ctermbg=none guibg=none
--- 	highlight SignColumn ctermbg=none guibg=none
--- 	highlight LineNr ctermbg=none guibg=none
--- 	highlight NonText ctermbg=none guibg=none
--- 	highlight EndOfBuffer ctermbg=none guibg=none
--- 	]])
--- end
+if not vim.g.neovide then
+	vim.cmd([[
+	highlight Normal ctermbg=none guibg=none
+	highlight SignColumn ctermbg=none guibg=none
+	highlight LineNr ctermbg=none guibg=none
+	highlight NonText ctermbg=none guibg=none
+	highlight EndOfBuffer ctermbg=none guibg=none
+	highlight TelescopeBorder ctermbg=none guibg=none
+	highlight TelescopeTitle ctermbg=none guibg=none
+	]])
+end
 
 
 -- }}}
