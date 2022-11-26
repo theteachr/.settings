@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
 	use 'arcticicestudio/nord-vim'
 	use 'ayu-theme/ayu-vim'
 	use 'bluz71/vim-nightfly-guicolors'
-	use { 'folke/tokyonight.nvim', { branch = 'main' } }
 	use 'nanotech/jellybeans.vim'
 	use 'sainnhe/everforest'
 	use 'sainnhe/gruvbox-material'
@@ -42,7 +41,6 @@ return require('packer').startup(function(use)
 	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',
-		tag = 'v1.*',
 	})
 	use 'savq/melange'
 	use { "catppuccin/nvim", as = "catppuccin" }

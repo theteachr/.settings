@@ -166,7 +166,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
 	"v",
 	"<leader>y",
-	"\"+y<CR>",
+	"\"+y",
 	{ noremap = true, silent = true }
 )
 
@@ -317,18 +317,46 @@ vim.g.ayucolor = 'mirage'
 -- vim.g.sonokai_style = 'maia'
 vim.g.sonokai_style = 'maia'
 
--- require("catppuccin").setup({
--- 	styles = {
--- 		comments = "NONE",
--- 		functions = "NONE",
--- 		keywords = "NONE",
--- 		strings = "NONE",
--- 		variables = "NONE",
--- 	},
--- 	integrations = {
--- 		treesitter = true,
--- 	},
--- })
+require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = true,
+    term_colors = false,
+    dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.15,
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+        notify = false,
+        mini = false,
+    },
+})
 
 -- Default options:
 require('kanagawa').setup({
@@ -350,9 +378,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.g.catppuccin_flavour = "mocha"
-
-vim.cmd("colorscheme kanagawa")
+vim.cmd.colorscheme "kanagawa"
 
 -- }}}
 
@@ -376,45 +402,6 @@ augroup END
 
 -- }}}
 
--- Neovide {{{
-
--- Colorscheme {{{
-
-if vim.g.neovide then
-	vim.cmd("colorscheme catppuccin")
-end
-
--- }}}
-
-vim.opt.guifont = "JetBrainsMono Nerd Font Mono:h18"
-
--- Launch full screen
-
-vim.g.neovide_fullscreen = false
-
--- Cursor animations
-
-vim.g.neovide_cursor_vfx_mode = "pixiedust"
-
--- vim.g.neovide_cursor_vfx_mode = "railgun"
--- vim.g.neovide_cursor_vfx_mode = "torpedo"
--- vim.g.neovide_cursor_vfx_mode = "sonicboom"
--- vim.g.neovide_cursor_vfx_mode = "ripple"
--- vim.g.neovide_cursor_vfx_mode = "wireframe"
-
--- Particle properties
-
-vim.g.neovide_cursor_vfx_opacity = 200.0
-vim.g.neovide_cursor_vfx_particle_lifetime = 1.2
-vim.g.neovide_cursor_vfx_particle_density = 64.0
-vim.g.neovide_cursor_vfx_particle_speed = 10.0
-vim.g.neovide_cursor_vfx_particle_phase = 1.5
-vim.g.neovide_cursor_vfx_particle_curl = 1.0
-
--- }}}
-
--- Transparency {{{
-
 if not vim.g.neovide then
 	vim.cmd([[
 	highlight Normal ctermbg=none guibg=none
@@ -426,8 +413,4 @@ if not vim.g.neovide then
 	highlight TelescopeTitle ctermbg=none guibg=none
 	]])
 end
-
-
--- }}}
-
 -- vim:fileencoding=utf-8:foldmethod=marker
