@@ -44,7 +44,7 @@ vim.opt.smartindent = true
 vim.opt.autoread = true
 vim.opt.hidden = true
 vim.opt.wrap = true
-vim.opt.number = true
+vim.opt.number = false
 vim.opt.relativenumber = true
 vim.opt.background = 'dark'
 
@@ -265,7 +265,7 @@ require('rose-pine').setup({
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
-	disable_background = false,
+	disable_background = true,
 	disable_float_background = false,
 	disable_italics = true,
 
@@ -298,7 +298,8 @@ require('rose-pine').setup({
 	-- Change specific vim highlight groups
 	highlight_groups = {
 		ColorColumn = { bg = 'rose' },
-		NonText = { fg = 'highlight_med' }
+		EndOfBuffer = { fg = 'highlight_med' },
+		CursorLineNr = { fg = 'love' },
 	}
 })
 
@@ -378,7 +379,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.cmd.colorscheme "kanagawa"
+vim.cmd.colorscheme "rose-pine"
 
 -- }}}
 
