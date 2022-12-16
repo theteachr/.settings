@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-surround'
 	use 'chrisbra/Colorizer'
 	--use 'kyazdani42/nvim-web-devicons'
-	use 'kyazdani42/nvim-tree.lua'
 	use '07734willy/PyRepl'
 	--use 'lewis6991/gitsigns.nvim'
 
@@ -29,7 +28,7 @@ return require('packer').startup(function(use)
 	-- colorschemes
 
 	use 'ajh17/spacegray.vim'
-	use "rebelot/kanagawa.nvim"
+	use 'rebelot/kanagawa.nvim'
 	use 'arcticicestudio/nord-vim'
 	use 'ayu-theme/ayu-vim'
 	use 'bluz71/vim-nightfly-guicolors'

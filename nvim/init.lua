@@ -66,30 +66,6 @@ vim.opt.signcolumn='yes:1'
 
 -- }}}
 
--- File Tree Settings {{{
-
-require("nvim-tree").setup {
-renderer = {
-	icons = {
-		show = {
-			file = true,
-			folder = true,
-			folder_arrow = true,
-			git = true,
-		},
-	},
-},
-}
-
-vim.api.nvim_set_keymap(
-	"n",
-	"<C-n>",
-	":NvimTreeToggle<CR>",
-	{ noremap = true, silent = true }
-)
-
--- }}}
-
 -- Filetype Settings {{{
 
 vim.cmd([[
