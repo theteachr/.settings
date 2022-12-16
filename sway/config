@@ -218,9 +218,8 @@ include /etc/sway/config.d/*
 
 output * bg #181818 solid_color
 
-for_window [class=".*"] border pixel 0
-
-# Configure gaps
+default_border pixel 0
+default_floating_border pixel 0
 
 gaps inner 10
 gaps outer 4
