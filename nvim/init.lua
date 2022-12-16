@@ -355,7 +355,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.cmd.colorscheme "rose-pine"
+vim.cmd.colorscheme "kanagawa"
 
 -- }}}
 
