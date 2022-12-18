@@ -3,9 +3,25 @@
 SETTINGS_DIR=$(pwd)
 DOT_CONFIG_DIR=${HOME}/.config
 
-ln -sf ${SETTINGS_DIR}/nvim        ${DOT_CONFIG_DIR}/
-ln -sf ${SETTINGS_DIR}/.tmux.conf  ${HOME}/
-ln -sf ${SETTINGS_DIR}/kitty       ${DOT_CONFIG_DIR}/
-ln -sf ${SETTINGS_DIR}/bpython     ${DOT_CONFIG_DIR}/
-ln -sf ${SETTINGS_DIR}/sway        ${DOT_CONFIG_DIR}/
-ln -sf ${SETTINGS_DIR}/hypr        ${DOT_CONFIG_DIR}/
+AT_DOT_CONFIG=(
+  nvim
+  kitty
+  bpython
+  sway
+  hypr
+  waybar
+)
+
+AT_HOME=(.tmux.conf)
+
+for config in "${AT_HOME[@]}"
+do
+  echo $config
+  ln -sf ${SETTINGS_DIR}/$config ${HOME}/
+done
+
+for config_folder in "${AT_DOT_CONFIG[@]}"
+do
+  echo $config_folder
+  ln -sf ${SETTINGS_DIR}/$config_folder ${DOT_CONFIG_DIR}/
+done
