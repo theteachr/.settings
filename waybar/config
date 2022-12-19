@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": [],
-    "modules-right": ["battery", "clock", "tray"],
+    "modules-right": ["clock", "tray"],
     // Modules configuration
     "wlr/workspaces": {},
     "keyboard-state": {
