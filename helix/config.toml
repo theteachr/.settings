@@ -1,0 +1,14 @@
+theme = "rose_pine"
+
+[editor]
+color-modes = true
+line-number = "relative"
+true-color = true
+
+[editor.statusline.mode]
+normal = "NOR"
+insert = "INS"
+select = "SEL"
+
+[keys.normal]
+X = "extend_line_above"

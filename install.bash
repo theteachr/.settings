@@ -11,6 +11,7 @@ AT_DOT_CONFIG=(
   hypr
   waybar
   tofi
+  helix
 )
 
 AT_HOME=(.tmux.conf)
