@@ -1,6 +1,6 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-SETTINGS_DIR=$(pwd)
+SETTINGS_DIR=$(dirname $0)
 DOT_CONFIG_DIR=${HOME}/.config
 
 AT_DOT_CONFIG=(
