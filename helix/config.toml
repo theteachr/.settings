@@ -11,8 +11,11 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
+[editor.whitespace]
+render = "all"
+
 [keys.normal]
 X = "extend_line_above"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-path"]
+left = ["mode", "spinner", "file-name"]
