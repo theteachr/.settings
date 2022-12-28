@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-SETTINGS_DIR=$(dirname $0)
+SETTINGS_DIR=$(realpath $(dirname $0))
 DOT_CONFIG_DIR=${HOME}/.config
+
+echo $SETTINGS_DIR
 
 AT_DOT_CONFIG=(
   nvim
