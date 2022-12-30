@@ -15,4 +15,4 @@ select = "underline"
 X = "extend_line_above"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-path"]
+left = ["mode", "spinner", "file-base-name"]
