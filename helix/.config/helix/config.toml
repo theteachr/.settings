@@ -18,4 +18,4 @@ render = "all"
 X = "extend_line_above"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name"]
+left = ["mode", "spinner", "file-base-name"]
