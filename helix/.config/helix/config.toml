@@ -1,4 +1,4 @@
-theme = "base16_transparent"
+theme = "catppuccin_trans"
 
 [editor]
 scrolloff = 0
