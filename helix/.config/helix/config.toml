@@ -1,4 +1,4 @@
-theme = "nightfox"
+theme = "base16_transparent"
 
 [editor]
 scrolloff = 0
