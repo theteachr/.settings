@@ -3,6 +3,7 @@
 
 source ${HOME}/.bash/aliases
 source ${HOME}/.bash/functions
+source ${HOME}/.bash/man_colors
 
 export EDITOR=vim
 
