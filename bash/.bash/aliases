@@ -1,3 +1,5 @@
+alias ls='ls --color=auto'
+
 # Folder Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
