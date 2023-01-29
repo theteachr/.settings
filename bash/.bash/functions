@@ -1,0 +1,46 @@
+# `ta` attaches to the most recent tmux session
+# `ta 35` attaches to the tmux session whose name starts with '35'.
+# Fails when there are more than one sessions with names starting with '35'.
+function ta {
+	if [ $# -eq 0 ]; then
+		tmux attach 
+	else
+		tmux attach -t "$1"
+	fi
+}
+
+# Takes a commit message, and prepends the the trac id extracted from the branch name
+# before performing `git commit`
+function commit {
+	local message="$1"
+	local ticket_id=$(git status -sb | grep -m 1 -oP '#[\dA-Za-z-]+' | head -n 1)
+
+	if [[ "x$ticket_id" != "x" ]]
+	then
+		message="$ticket_id $message"
+	fi
+
+	git commit -m "$message"
+}
+
+# Creates a new tmux session.
+# If no argument is given, the name of the session will be set
+# to the directory from where the command is executed.
+
+function tc {
+	if [ $# -eq 0 ]; then
+		tmux new-session -s $(basename `pwd`)
+	else
+		tmux new-session -s "$1"
+	fi
+}
+
+function checkout {
+	git checkout $(git branch | fzf)
+}
+
+function de {
+	docker exec -it $1 bash
+}
+
+# vim:filetype=bash

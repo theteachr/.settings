@@ -1,0 +1,15 @@
+# Folder Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# tmux
+alias tl='tmux ls'
+
+# git
+alias gs='git status -sb'
+alias gl='git log --pretty=oneline'
+
+alias k=kubectl
+alias d=docker
+
+# vim:filetype=bash
