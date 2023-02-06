@@ -1,4 +1,4 @@
-theme = "nightfox"
+theme = "catppuccin_frappe"
 
 [editor]
 scrolloff = 0
@@ -6,13 +6,22 @@ color-modes = true
 line-number = "relative"
 true-color = true
 
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
+[editor.file-picker]
+hidden = false
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-select = "underline"
 
 [keys.normal]
 X = "extend_line_above"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-base-name"]
+
+[editor.lsp]
+display-messages = true
