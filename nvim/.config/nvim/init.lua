@@ -238,11 +238,11 @@ vnoremap ae :<C-U>silent! normal! ggVG<CR>
 
 require('rose-pine').setup({
 	--- @usage 'main' | 'moon'
-	dark_variant = 'main',
+	dark_variant = 'moon',
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = true,
-	disable_float_background = false,
+	disable_float_background = true,
 	disable_italics = true,
 
 	--- @usage string hex value or named color from rosepinetheme.com/palette
@@ -355,7 +355,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "rose-pine"
 
 -- }}}
 
