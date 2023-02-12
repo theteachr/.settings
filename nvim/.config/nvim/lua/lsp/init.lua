@@ -123,7 +123,7 @@ local on_attach = function(client, bufnr)
 end
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = true,
   underline = false,
   update_in_insert = false,
