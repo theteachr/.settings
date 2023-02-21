@@ -1,4 +1,4 @@
-theme = "rose_pine_moon"
+theme = "rose_pine_clean"
 
 [editor]
 scrolloff = 0
@@ -24,4 +24,5 @@ X = "extend_line_above"
 left = ["mode", "spinner", "file-base-name"]
 
 [editor.lsp]
-display-messages = true
+display-messages = false
+auto-signature-help = false
