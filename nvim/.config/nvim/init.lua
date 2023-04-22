@@ -346,7 +346,7 @@ require('kanagawa').setup({
     variablebuiltinStyle = { italic = true},
     specialReturn = true,       -- special highlight for the return keyword
     specialException = true,    -- special highlight for exception handling keywords
-    transparent = false,        -- do not set background color
+    transparent = true,        -- do not set background color
     dimInactive = false,        -- dim inactive window `:h hl-NormalNC`
     globalStatus = false,       -- adjust window separators highlight for laststatus=3
     terminalColors = true,      -- define vim.g.terminal_color_{0,17}
@@ -355,7 +355,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.cmd.colorscheme "rose-pine"
+vim.cmd.colorscheme "gruvbox-material"
 
 -- }}}
 
@@ -386,8 +386,7 @@ if not vim.g.neovide then
 	highlight LineNr ctermbg=none guibg=none
 	highlight NonText ctermbg=none guibg=none
 	highlight EndOfBuffer ctermbg=none guibg=none
-	highlight TelescopeBorder ctermbg=none guibg=none
-	highlight TelescopeTitle ctermbg=none guibg=none
+	highlight NormalNC ctermbg=none guibg=none
 	]])
 end
 -- vim:fileencoding=utf-8:foldmethod=marker
