@@ -118,7 +118,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', 'gr', ':Telescope lsp_references<Cr>', bufopts)
   vim.keymap.set('n', '<C-f>', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
@@ -152,11 +152,11 @@ require('lspconfig')['rust_analyzer'].setup{
     }
 }
 
-require'lspconfig'.ocamllsp.setup{}
-
 require'lspconfig'.cssls.setup{
 	on_attach = on_attach
 }
+
+require'lspconfig'.ocamllsp.setup{}
 
 require'lspconfig'.elmls.setup{
 	on_attach = on_attach

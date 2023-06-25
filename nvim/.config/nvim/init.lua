@@ -2,6 +2,8 @@
 -- Author: @theteachr
 
 require('lsp')
+require('cmp').setup { enabled = false }
+
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -20,7 +22,11 @@ require('telescope').setup {
 	defaults = {
 		file_ignore_patterns = { "target", "__pycache__" },
 		path_display = { "tail" },
-		sorting_strategy = "descending"
+		sorting_strategy = "descending",
+		layout_strategy = "vertical",
+		layout_config = {
+			vertical = { width = 0.64 },
+		},
 	}
 }
 
@@ -62,7 +68,7 @@ vim.opt.listchars = "tab:→ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 
 vim.cmd("set path+=**")
 
-vim.opt.signcolumn='yes:1'
+vim.opt.signcolumn='no'--'yes:1'
 
 -- }}}
 
@@ -355,7 +361,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.cmd.colorscheme "gruvbox-material"
+vim.cmd.colorscheme "everforest"
 
 -- }}}
 
