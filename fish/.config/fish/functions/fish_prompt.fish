@@ -4,7 +4,7 @@ function fish_prompt
     if not set -q VIRTUAL_ENV_DISABLE_PROMPT
         set -g VIRTUAL_ENV_DISABLE_PROMPT true
     end
-    set_color yellow
+    set_color cyan
     printf '%s' $USER
     set_color normal
     printf ' at '
@@ -30,7 +30,7 @@ function fish_prompt
 		set_color green
 	end
 
-	echo -n "↪  "
+	echo -n "↪ "
 
     set_color normal
 end
