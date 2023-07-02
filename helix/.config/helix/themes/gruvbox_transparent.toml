@@ -1,4 +1,4 @@
-inherits = "rose_pine"
+inherits = "gruvbox_dark_hard"
 
 "ui.background" = { fg = "white" }
 

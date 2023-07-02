@@ -1,4 +1,4 @@
-inherits = "rose_pine"
+inherits = "everforest_dark"
 
 "ui.background" = { fg = "white" }
 
@@ -6,4 +6,4 @@ inherits = "rose_pine"
 "diagnostic.hint" = { modifiers = ["dim"] }
 "diagnostic.debug" = { modifiers = ["dim"] }
 "diagnostic.warning" = { modifiers = ["dim"] }
-"diagnostic.error" = { modifiers = ["dim"] }
+"diagnostic.error" = { modifiers = ["dim", "bold"] }
