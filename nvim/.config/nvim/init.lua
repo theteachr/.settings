@@ -2,7 +2,6 @@
 -- Author: @theteachr
 
 require('lsp')
-require('cmp').setup { enabled = false }
 
 
 vim.g.mapleader = ' '
@@ -43,7 +42,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartcase = true
 vim.opt.smarttab = true
-vim.opt.ignorecase = false
+vim.opt.ignorecase = true
 vim.opt.expandtab = false
 vim.opt.hlsearch = false
 vim.opt.smartindent = true
@@ -68,7 +67,7 @@ vim.opt.listchars = "tab:→ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 
 vim.cmd("set path+=**")
 
-vim.opt.signcolumn='no'--'yes:1'
+vim.opt.signcolumn='yes:1'
 
 -- }}}
 
@@ -341,27 +340,7 @@ require("catppuccin").setup({
     },
 })
 
--- Default options:
-require('kanagawa').setup({
-    undercurl = true,           -- enable undercurls
-    commentStyle = { italic = false },
-    functionStyle = {},
-    keywordStyle = { italic = false },
-    statementStyle = { bold = true },
-    typeStyle = {},
-    variablebuiltinStyle = { italic = true},
-    specialReturn = true,       -- special highlight for the return keyword
-    specialException = true,    -- special highlight for exception handling keywords
-    transparent = true,        -- do not set background color
-    dimInactive = false,        -- dim inactive window `:h hl-NormalNC`
-    globalStatus = false,       -- adjust window separators highlight for laststatus=3
-    terminalColors = true,      -- define vim.g.terminal_color_{0,17}
-    colors = {},
-    overrides = {},
-    theme = "default"           -- Load "default" theme or the experimental "light" theme
-})
-
-vim.cmd.colorscheme "everforest"
+vim.cmd.colorscheme "kanagawa-dragon"
 
 -- }}}
 
@@ -390,9 +369,11 @@ if not vim.g.neovide then
 	highlight Normal ctermbg=none guibg=none
 	highlight SignColumn ctermbg=none guibg=none
 	highlight LineNr ctermbg=none guibg=none
+	highlight CursorLineNr ctermbg=none guibg=none
 	highlight NonText ctermbg=none guibg=none
 	highlight EndOfBuffer ctermbg=none guibg=none
 	highlight NormalNC ctermbg=none guibg=none
+	highlight TelescopeBorder ctermbg=none guibg=none
 	]])
 end
 -- vim:fileencoding=utf-8:foldmethod=marker
