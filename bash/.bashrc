@@ -1,4 +1,5 @@
-source ~/.bash/aliases.bash
+. ~/.bash/aliases.bash
+. ~/.bash/functions.bash
 
 PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
 
@@ -25,3 +26,5 @@ __prompt_command() {
 
 HOMEBREW_BIN=/opt/homebrew/bin/
 PATH=${HOMEBREW_BIN}:$PATH
+
+eval $(opam env)
