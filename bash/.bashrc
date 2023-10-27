@@ -24,7 +24,7 @@ __prompt_command() {
     PS1+="${reset}@${blu}\h ${pur}\W${yel}$ ${reset}"
 }
 
-HOMEBREW_BIN=/opt/homebrew/bin/
+HOMEBREW_BIN=/opt/homebrew/bin
 PATH=${HOMEBREW_BIN}:$PATH
 
 eval $(opam env)
