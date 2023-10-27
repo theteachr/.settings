@@ -27,7 +27,6 @@ return require('packer').startup(function(use)
 
 	-- colorschemes
 
-	use 'ajh17/spacegray.vim'
 	use 'rebelot/kanagawa.nvim'
 	use 'arcticicestudio/nord-vim'
 	use 'ayu-theme/ayu-vim'
