@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 	--use 'kyazdani42/nvim-web-devicons'
 	use '07734willy/PyRepl'
 	--use 'lewis6991/gitsigns.nvim'
+	use({ 'vladdoster/remember.nvim', config = [[ require('remember') ]] })
 
 	-- syntax
 
