@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
 
 	use 'rebelot/kanagawa.nvim'
 	use 'arcticicestudio/nord-vim'
-	use 'ayu-theme/ayu-vim'
+	use 'Shatur/neovim-ayu'
 	use 'bluz71/vim-nightfly-guicolors'
 	use 'nanotech/jellybeans.vim'
 	use 'sainnhe/everforest'

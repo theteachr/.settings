@@ -1,14 +1,10 @@
-theme = "rose_pine_clean"
+theme = "kanagawa"
 
 [editor]
 scrolloff = 0
 color-modes = true
 line-number = "relative"
 true-color = true
-
-[editor.whitespace.render]
-space = "all"
-tab = "all"
 
 [editor.file-picker]
 hidden = false

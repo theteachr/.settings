@@ -7,7 +7,7 @@ require('lsp')
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- require('cmp').setup.buffer { enabled = false }
+require('cmp').setup.buffer { enabled = false }
 
 -- Treesitter Settings {{{
 
@@ -344,9 +344,9 @@ require("catppuccin").setup({
 require('kanagawa').setup({
     compile = false,             -- enable compiling the colorscheme
     undercurl = true,            -- enable undercurls
-    commentStyle = { italic = false },
+    commentStyle = { italic = true },
     functionStyle = {},
-    keywordStyle = { italic = false },
+    keywordStyle = { italic = true },
     statementStyle = { bold = true },
     typeStyle = {},
     transparent = false,         -- do not set background color
