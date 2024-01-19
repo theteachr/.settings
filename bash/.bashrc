@@ -26,7 +26,11 @@ __prompt_command() {
 
 HOMEBREW_BIN=/opt/homebrew/bin
 GOPATH=${HOME}/go
+DOOM=${HOME}/.config/emacs/bin
 
-export PATH=${HOMEBREW_BIN}:${GOPATH}/bin:$PATH
+export PATH=${HOMEBREW_BIN}:$PATH
+export PATH=${GOPATH}/bin:$PATH
+export PATH=${DOOM}:$PATH
+export PATH=${HOME}/.local/bin:$PATH
 
 eval $(opam env)
