@@ -22,3 +22,4 @@ left = ["mode", "spinner", "file-base-name"]
 [editor.lsp]
 display-messages = false
 auto-signature-help = false
+goto-reference-include-declaration = false
