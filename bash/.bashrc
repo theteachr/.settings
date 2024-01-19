@@ -1,27 +1,26 @@
 . ~/.bash/aliases.bash
 . ~/.bash/functions.bash
 
-PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
+PROMPT_COMMAND=__prompt_command
 
 __prompt_command() {
-    local EXIT="$?"                # This needs to be first
+    local EXIT="$?"
     PS1=""
 
-    local reset='\[\e[0m\]'
-
-    local red='\[\e[0;31m\]'
-    local gre='\[\e[0;32m\]'
-    local yel='\[\e[1;33m\]'
-    local blu='\[\e[1;34m\]'
-    local pur='\[\e[0;35m\]'
+    local c='\[\e[0m\]'    # reset / clear
+    local r='\[\e[0;31m\]' # red
+    local g='\[\e[0;32m\]' # green
+    local y='\[\e[1;33m\]' # yellow
+    local b='\[\e[1;34m\]' # blue
+    local m='\[\e[0;35m\]' # magenta
 
     if [ $EXIT != 0 ]; then
-        PS1+="${red}\u${reset}"        # Add red if exit code non 0
+        PS1+="${r}"
     else
-        PS1+="${gre}\u${reset}"
+        PS1+="${g}"
     fi
 
-    PS1+="${reset}@${blu}\h ${pur}\W ${yel}$ ${reset}"
+    PS1+="\u${c}${c}@${b}\h ${m}\W ${y}$ ${c}"
 }
 
 HOMEBREW_BIN=/opt/homebrew/bin
