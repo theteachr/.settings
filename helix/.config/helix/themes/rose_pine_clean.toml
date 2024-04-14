@@ -1,0 +1,9 @@
+inherits = "rose_pine"
+
+"ui.background" = { fg = "white" }
+
+"diagnostic.info" = { modifiers = ["dim"] }
+"diagnostic.hint" = { modifiers = ["dim"] }
+"diagnostic.debug" = { modifiers = ["dim"] }
+"diagnostic.warning" = { modifiers = ["dim"] }
+"diagnostic.error" = { modifiers = ["dim"] }

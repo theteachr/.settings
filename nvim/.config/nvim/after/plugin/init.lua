@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 	--use 'kyazdani42/nvim-web-devicons'
 	use '07734willy/PyRepl'
 	--use 'lewis6991/gitsigns.nvim'
+	use({ 'vladdoster/remember.nvim', config = [[ require('remember') ]] })
 
 	-- syntax
 
@@ -27,10 +28,9 @@ return require('packer').startup(function(use)
 
 	-- colorschemes
 
-	use 'ajh17/spacegray.vim'
 	use 'rebelot/kanagawa.nvim'
 	use 'arcticicestudio/nord-vim'
-	use 'ayu-theme/ayu-vim'
+	use 'Shatur/neovim-ayu'
 	use 'bluz71/vim-nightfly-guicolors'
 	use 'nanotech/jellybeans.vim'
 	use 'sainnhe/everforest'

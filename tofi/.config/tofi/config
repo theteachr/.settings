@@ -140,7 +140,7 @@
 #
 	# Width and height of the window. Can be pixels or a percentage.
 	width = 1280
-	height = 32
+	height = 36
 
 	# Window background color
 	background-color = #1B1D1E

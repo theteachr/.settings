@@ -4,8 +4,6 @@ SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr__2E_2E_2E_:cd\x20\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gs:git\x20status\x20\x2dsb
-SETUVAR _fish_abbr_l:exa\x20\x2dla
-SETUVAR _fish_abbr_ls:exa
 SETUVAR _fish_abbr_n:nvim
 SETUVAR _fish_abbr_py:bpython\x20\x2dq
 SETUVAR _fish_abbr_ta:tmux\x20attach

@@ -3,10 +3,11 @@
 
 require('lsp')
 
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- require('cmp').setup.buffer { enabled = false }
+require('cmp').setup.buffer { enabled = false }
 
 -- Treesitter Settings {{{
 
@@ -20,7 +21,11 @@ require('telescope').setup {
 	defaults = {
 		file_ignore_patterns = { "target", "__pycache__" },
 		path_display = { "tail" },
-		sorting_strategy = "descending"
+		sorting_strategy = "descending",
+		layout_strategy = "vertical",
+		layout_config = {
+			vertical = { width = 0.64 },
+		},
 	}
 }
 
@@ -37,7 +42,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smartcase = true
 vim.opt.smarttab = true
-vim.opt.ignorecase = false
+vim.opt.ignorecase = true
 vim.opt.expandtab = false
 vim.opt.hlsearch = false
 vim.opt.smartindent = true
@@ -242,7 +247,7 @@ require('rose-pine').setup({
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = true,
-	disable_float_background = false,
+	disable_float_background = true,
 	disable_italics = true,
 
 	--- @usage string hex value or named color from rosepinetheme.com/palette
@@ -337,25 +342,31 @@ require("catppuccin").setup({
 
 -- Default options:
 require('kanagawa').setup({
-    undercurl = true,           -- enable undercurls
-    commentStyle = { italic = false },
+    compile = false,             -- enable compiling the colorscheme
+    undercurl = true,            -- enable undercurls
+    commentStyle = { italic = true },
     functionStyle = {},
-    keywordStyle = { italic = false },
+    keywordStyle = { italic = true },
     statementStyle = { bold = true },
     typeStyle = {},
-    variablebuiltinStyle = { italic = true},
-    specialReturn = true,       -- special highlight for the return keyword
-    specialException = true,    -- special highlight for exception handling keywords
-    transparent = false,        -- do not set background color
-    dimInactive = false,        -- dim inactive window `:h hl-NormalNC`
-    globalStatus = false,       -- adjust window separators highlight for laststatus=3
-    terminalColors = true,      -- define vim.g.terminal_color_{0,17}
-    colors = {},
-    overrides = {},
-    theme = "default"           -- Load "default" theme or the experimental "light" theme
+    transparent = false,         -- do not set background color
+    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
+    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
+    colors = {                   -- add/modify theme and palette colors
+        palette = {},
+        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+    },
+    overrides = function(colors) -- add/modify highlights
+        return {}
+    end,
+    theme = "wave",              -- Load "wave" theme when 'background' option is not set
+    background = {               -- map the value of 'background' option to a theme
+        dark = "wave",           -- try "dragon" !
+        light = "lotus"
+    },
 })
 
-vim.cmd.colorscheme "kanagawa"
+vim.cmd.colorscheme "kanagawa-dragon"
 
 -- }}}
 
@@ -384,10 +395,11 @@ if not vim.g.neovide then
 	highlight Normal ctermbg=none guibg=none
 	highlight SignColumn ctermbg=none guibg=none
 	highlight LineNr ctermbg=none guibg=none
+	highlight CursorLineNr ctermbg=none guibg=none
 	highlight NonText ctermbg=none guibg=none
 	highlight EndOfBuffer ctermbg=none guibg=none
+	highlight NormalNC ctermbg=none guibg=none
 	highlight TelescopeBorder ctermbg=none guibg=none
-	highlight TelescopeTitle ctermbg=none guibg=none
 	]])
 end
 -- vim:fileencoding=utf-8:foldmethod=marker

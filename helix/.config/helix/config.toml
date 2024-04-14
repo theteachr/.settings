@@ -1,4 +1,4 @@
-theme = "nightfox"
+theme = "kanagawa"
 
 [editor]
 scrolloff = 0
@@ -6,10 +6,12 @@ color-modes = true
 line-number = "relative"
 true-color = true
 
+[editor.file-picker]
+hidden = false
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-select = "underline"
 
 [editor.whitespace]
 render = "all"
@@ -19,3 +21,8 @@ X = "extend_line_above"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-base-name"]
+
+[editor.lsp]
+display-messages = false
+auto-signature-help = false
+goto-reference-include-declaration = false
