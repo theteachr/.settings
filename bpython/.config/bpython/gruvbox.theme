@@ -16,7 +16,7 @@ number = m
 operator = y
 punctuation = b
 token = C
-paren = k
+paren = c
 
 [interface]
 # XXX: gnome-terminal appears to be braindead. The cursor will disappear unless

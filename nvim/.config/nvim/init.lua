@@ -20,12 +20,8 @@ require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 require('telescope').setup {
 	defaults = {
 		file_ignore_patterns = { "target", "__pycache__" },
-		path_display = { "tail" },
 		sorting_strategy = "descending",
 		layout_strategy = "vertical",
-		layout_config = {
-			vertical = { width = 0.64 },
-		},
 	}
 }
 
@@ -51,7 +47,7 @@ vim.opt.hidden = true
 vim.opt.wrap = true
 vim.opt.number = false
 vim.opt.relativenumber = true
-vim.opt.background = 'dark'
+vim.opt.background = 'light'
 
 vim.o.shortmess = vim.o.shortmess .. 'IFT'
 
@@ -67,7 +63,7 @@ vim.opt.listchars = "tab:→ ,eol:¬,space:·,trail:•,extends:⟩,precedes:⟨
 
 vim.cmd("set path+=**")
 
-vim.opt.signcolumn='yes:1'
+vim.opt.signcolumn = 'yes'
 
 -- }}}
 
@@ -246,7 +242,7 @@ require('rose-pine').setup({
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
-	disable_background = true,
+	disable_background = false,
 	disable_float_background = true,
 	disable_italics = true,
 
@@ -281,6 +277,8 @@ require('rose-pine').setup({
 		ColorColumn = { bg = 'rose' },
 		EndOfBuffer = { fg = 'highlight_med' },
 		CursorLineNr = { fg = 'love' },
+		Comment = { italic = true },
+		Keyword = { italic = true },
 	}
 })
 
@@ -305,7 +303,7 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = true,
+    transparent_background = false,
     term_colors = false,
     dim_inactive = {
         enabled = false,
@@ -340,34 +338,7 @@ require("catppuccin").setup({
     },
 })
 
--- Default options:
-require('kanagawa').setup({
-    compile = false,             -- enable compiling the colorscheme
-    undercurl = true,            -- enable undercurls
-    commentStyle = { italic = true },
-    functionStyle = {},
-    keywordStyle = { italic = true },
-    statementStyle = { bold = true },
-    typeStyle = {},
-    transparent = false,         -- do not set background color
-    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-    colors = {                   -- add/modify theme and palette colors
-        palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
-    },
-    overrides = function(colors) -- add/modify highlights
-        return {}
-    end,
-    theme = "wave",              -- Load "wave" theme when 'background' option is not set
-    background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
-        light = "lotus"
-    },
-})
-
-vim.cmd.colorscheme "kanagawa-dragon"
-
+vim.cmd.colorscheme "everforest"
 -- }}}
 
 -- Auto Commands {{{
@@ -393,6 +364,7 @@ augroup END
 if not vim.g.neovide then
 	vim.cmd([[
 	highlight Normal ctermbg=none guibg=none
+	highlight NormalNC ctermbg=none guibg=none
 	highlight SignColumn ctermbg=none guibg=none
 	highlight LineNr ctermbg=none guibg=none
 	highlight CursorLineNr ctermbg=none guibg=none

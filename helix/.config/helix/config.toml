@@ -1,4 +1,4 @@
-theme = "kanagawa"
+theme = "everforest_light"
 
 [editor]
 scrolloff = 0
@@ -13,11 +13,15 @@ hidden = false
 insert = "bar"
 normal = "block"
 
-[editor.whitespace]
-render = "all"
+# [editor.whitespace.render]
+# space = "all"
+# tab = "all"
 
 [keys.normal]
 X = "extend_line_above"
+
+[editor.file-picker]
+hidden = false
 
 [editor.statusline]
 left = ["mode", "spinner", "file-base-name"]

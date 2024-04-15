@@ -161,3 +161,5 @@ require'lspconfig'.ocamllsp.setup{}
 require'lspconfig'.elmls.setup{
 	on_attach = on_attach
 }
+
+require'lspconfig'.gopls.setup{}

@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
 
 	-- syntax
 
-	use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
+	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/playground'
 
 	-- language specific
@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
 	use 'rebelot/kanagawa.nvim'
 	use 'arcticicestudio/nord-vim'
 	use 'Shatur/neovim-ayu'
+	use 'RRethy/nvim-base16'
 	use 'bluz71/vim-nightfly-guicolors'
 	use 'nanotech/jellybeans.vim'
 	use 'sainnhe/everforest'
