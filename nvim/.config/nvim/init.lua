@@ -47,7 +47,7 @@ vim.opt.hidden = true
 vim.opt.wrap = true
 vim.opt.number = false
 vim.opt.relativenumber = true
-vim.opt.background = 'light'
+vim.opt.background = 'dark'
 
 vim.o.shortmess = vim.o.shortmess .. 'IFT'
 
