@@ -95,6 +95,9 @@ return {
 		bottom = 0,
 	},
 	window_background_opacity = 1,
+	window_decorations = "RESIZE",
+	initial_rows = 36,
+	initial_cols = 140,
 }
 
 -- vim:foldmethod=indent
