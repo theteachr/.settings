@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 return {
 	font_size = 11,
-	font = wezterm.font 'MonoLisa Variable',
+	font = wezterm.font 'Consolas',
 	default_domain = 'WSL:Ubuntu',
 	harfbuzz_features = {
 		'zero',
@@ -14,31 +14,31 @@ return {
 		'ss05=1',
 	},
 	force_reverse_video_cursor = true,
-	--color_scheme = 'Everforest Light (Gogh)',
-	colors = {
-		background = '#2d353b',
-		foreground = '#d8caac',
-		ansi = {
-			'hsl:201 15 23',
-			'hsl:359 67 70',
-			'hsl:83 34 63',
-			'hsl:40 54 68',
-			'hsl:172 26 61',
-			'hsl:331 39 72',
-			'hsl:135 31 64',
-			'hsl:41 36 76',
-		},
-		brights = {
-			'hsl:201 15 33',
-			'hsl:359 67 74',
-			'hsl:83 34 67',
-			'hsl:40 54 72',
-			'hsl:172 26 65',
-			'hsl:331 39 76',
-			'hsl:135 31 68',
-			'hsl:41 36 80',
-		}
-	},
+	color_scheme = 'rose-pine-dawn',
+	--colors = {
+	--	background = '#2d353b',
+	--	foreground = '#d8caac',
+	--	ansi = {
+	--		'hsl:201 15 23',
+	--		'hsl:359 67 70',
+	--		'hsl:83 34 63',
+	--		'hsl:40 54 68',
+	--		'hsl:172 26 61',
+	--		'hsl:331 39 72',
+	--		'hsl:135 31 64',
+	--		'hsl:41 36 76',
+	--	},
+	--	brights = {
+	--		'hsl:201 15 33',
+	--		'hsl:359 67 74',
+	--		'hsl:83 34 67',
+	--		'hsl:40 54 72',
+	--		'hsl:172 26 65',
+	--		'hsl:331 39 76',
+	--		'hsl:135 31 68',
+	--		'hsl:41 36 80',
+	--	}
+	--},
 	enable_tab_bar = false,
 	keys = {
 		{

@@ -47,7 +47,7 @@ vim.opt.hidden = true
 vim.opt.wrap = true
 vim.opt.number = false
 vim.opt.relativenumber = true
-vim.opt.background = 'dark'
+vim.opt.background = 'light'
 
 vim.o.shortmess = vim.o.shortmess .. 'IFT'
 
@@ -338,7 +338,7 @@ require("catppuccin").setup({
     },
 })
 
-vim.cmd.colorscheme "everforest"
+vim.cmd.colorscheme "rose-pine"
 -- }}}
 
 -- Auto Commands {{{
