@@ -6,6 +6,9 @@ color-modes = true
 line-number = "relative"
 true-color = true
 
+[editor.gutters]
+layout = ["diagnostics", "spacer", "diff", "spacer"]
+
 [editor.soft-wrap]
 enable = true
 
