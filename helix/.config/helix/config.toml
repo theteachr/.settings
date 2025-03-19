@@ -1,10 +1,12 @@
 theme = "kanagawa"
 
 [editor]
-scrolloff = 0
 color-modes = true
-line-number = "relative"
 true-color = true
+
+[editor.gutters]
+layout = ["diagnostics", "spacer", "diff"]
+
 
 [editor.file-picker]
 hidden = false
@@ -12,9 +14,6 @@ hidden = false
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-
-[editor.whitespace]
-render = "all"
 
 [keys.normal]
 X = "extend_line_above"
