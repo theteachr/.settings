@@ -1,13 +1,17 @@
 export TYPEWRITTEN_LEFT_PROMPT_PREFIX_FUNCTION=(date +%H:%M:%S)
-export TYPEWRITTEN_CURSOR="terminal"
 export TYPEWRITTEN_COLORS="left_prompt_prefix:yellow"
+export TYPEWRITTEN_CURSOR="bar"
 
 fpath+=${HOME}/.zsh/typewritten
 
 autoload -U promptinit; promptinit
 prompt typewritten
 
-path=(${HOME}/go/bin $path)
+path=(
+  ${HOME}/go/bin
+  /opt/homebrew/opt/openjdk/bin
+  $path
+)
 
 bindkey -v
 
