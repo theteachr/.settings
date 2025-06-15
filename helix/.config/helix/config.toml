@@ -1,8 +1,9 @@
-theme = "kanagawa"
+theme = "groovbox"
 
 [editor]
 color-modes = true
 true-color = true
+mouse = false
 
 [editor.gutters]
 layout = ["diagnostics", "spacer", "diff"]
