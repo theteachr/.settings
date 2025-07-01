@@ -6,5 +6,5 @@ file-types = ["go"]
 roots = ["go.work", "go.mod"]
 auto-format = true
 comment-token = "//"
-language-servers = [ "gopls", "golangci-lint-lsp" ]
+language-servers = [ "gopls", "golangci-lint-langserver" ]
 indent = { tab-width = 4, unit = "\t" }
