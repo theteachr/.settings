@@ -1,19 +1,9 @@
 local wezterm = require 'wezterm'
 
 return {
-	font_size = 15,
-	font = wezterm.font 'TX-02',
-	harfbuzz_features = {
-		'zero',
-		'liga=1',
-		'ss01=1',
-		'ss02=1',
-		'ss03=1',
-		'ss04=1',
-		'ss05=1',
-	},
+	font_size = 25,
 	force_reverse_video_cursor = true,
-	color_scheme = "gruvbox_material_dark_hard",
+	color_scheme = "Catppuccin Mocha",
 	color_schemes = {
 		["gruvbox_material_dark_hard"] = {
 			foreground = "#D4BE98",
@@ -62,10 +52,10 @@ return {
 	},
 	audible_bell = "Disabled",
 	window_padding = {
-		left = 0,
-		right = 0,
-		top = 0,
-		bottom = 0,
+		left = 32,
+		right = 32,
+		top = 32,
+		bottom = 32,
 	},
 	window_decorations = "RESIZE",
 	initial_rows = 36,
