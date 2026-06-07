@@ -1,3 +1,4 @@
 inherits = "gruvbox-material"
 
+"ui.background" = {}
 "punctuation.bracket" = "grey1"

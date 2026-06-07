@@ -1,0 +1,2 @@
+inherits = 'catppuccin_mocha'
+"ui.statusline" = { fg = "white" }

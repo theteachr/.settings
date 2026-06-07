@@ -1,4 +1,4 @@
-theme = "groovbox"
+theme = "cat"
 
 [editor]
 color-modes = true
@@ -6,7 +6,7 @@ true-color = true
 mouse = false
 
 [editor.gutters]
-layout = ["diagnostics", "spacer", "diff"]
+layout = ["diagnostics", "spacer", "diff", "spacer"]
 
 
 [editor.file-picker]
@@ -20,7 +20,9 @@ normal = "block"
 X = "extend_line_above"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-base-name"]
+left = []
+right = []
+center = []
 
 [editor.lsp]
 display-messages = false

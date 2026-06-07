@@ -1,0 +1,10 @@
+inherits = "gruvbox_light"
+
+"ui.background" = { fg = "white" }
+"ui.statusline.normal" = { bg = "light-magenta", fg = "black" }
+
+"diagnostic.info" = { modifiers = ["dim"] }
+"diagnostic.hint" = { modifiers = ["dim"] }
+"diagnostic.debug" = { modifiers = ["dim"] }
+"diagnostic.warning" = { modifiers = ["dim"] }
+"diagnostic.error" = { modifiers = ["dim"] }

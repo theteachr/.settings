@@ -1,0 +1,31 @@
+# AMBERCOM
+# Amber-tinted flavor of Encom OS
+# author: @kverb
+inherits = "encom"
+
+[palette]
+# color swatches. these are primarily here for reference
+dark = "#0F1014"        # nearly black
+darkbrown = "#3e322a"   # dark brown
+amber01 = "#f7dabe"     # "amber" light
+amber02 = "#f4cda7"     # a little darker
+amber03 = "#f1c091"     # darker still
+amber04 = "#4a4139"     # very dark amber
+teal = "#00a595"        # Encom Primary color
+bteal = "#00d8c3"       # bright teal
+cyan = "#b0e0e6"        # "powder blue"
+bcyan = "#66e1f1"       # bright cyan
+mvr = "#C71585"         # "medium violet red"
+# semantic palette "vars"
+bg = "#0F1014"          # nearly black
+bg2 = "#3e322a"         # dark brown
+primary1 = "#f7dabe"    # "amber" light
+primary2 = "#f4cda7"    # a little darker
+primary3 = "#f1c091"    # darker still
+primary4 = "#4a4139"    # very dark amber
+secondary = "#00a595"   # Encom Primary color (teal)
+bseconday = "#00d8c3"   # bright teal
+tertiary = "#b0e0e6"    # "powder blue" (cyan)
+btertiary = "#66e1f1"   # bright cyan
+red = "#C71585"         # "medium violet red"
+whitespace = "#3f3730"  # one shade darker than primary4
